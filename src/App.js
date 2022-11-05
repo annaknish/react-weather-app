@@ -4,7 +4,7 @@ export default function App() {
   return (
     <div className="App">
       Weather App
-      <a href=""></a>
+      <a href="https://github.com/annaknish/react-weather-app">This</a>
     </div>
   );
 }
