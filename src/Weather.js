@@ -3,7 +3,14 @@ import axios from "axios";
 import "./Weather.css";
 
 export default function Weather() {
-  let apiKey = cb94f4da5c575e994b3b723a98782b7b;
+  function handleResponse(response) {
+    console.log(response.data);
+  }
+
+  const apiKey = "cb94f4da5c575e994b3b723a98782b7b";
+  let city = "London";
+  let apiUrl = `https://api.openweathermap.org/data/3.0/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(handleResponse);
   return (
     <div className="Weather">
       <form>
